@@ -727,8 +727,8 @@
   }
 
   .price-btn:hover {
-    background: var(--ink);
-    color: var(--linen);
+    background: var(--gold);
+    color: var(--ink);
   }
 
   .price-card.featured .price-btn:hover {
@@ -938,9 +938,9 @@
   }
 
   .btn-primary:hover {
-    background: var(--ink);
+    background: var(--umber);
     color: var(--linen);
-    border-color: var(--ink);
+    border-color: var(--umber);
   }
 
   .btn-secondary {
@@ -958,9 +958,9 @@
   }
 
   .btn-secondary:hover {
-    background: var(--ink);
-    color: var(--linen);
-    border-color: var(--ink);
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
   }
 
   /* ── FOOTER ── */
@@ -1323,10 +1323,10 @@
       <p class="intro-label">What is Integra</p>
       <h2 class="intro-heading">A different kind of healing. <em>For those who are ready.</em></h2>
       <p class="intro-body">
-        Integra is a private practice offering something genuinely rare — a deeply considered approach to energy healing that weaves together Reiki, Seichem, sound therapy and meditation into one seamless, personalised session.
+        Integra takes its name from the Latin <em>integrare</em> — to make whole. It is the principle that guides everything here: that healing is not the fixing of separate parts, but the restoration of the whole person at once. Body, mind, soul and energy field — all of it, together, in one session.
       </p>
       <p class="intro-body">
-        This is not a one-size-fits-all treatment. It is an unhurried, intuitive experience — crafted entirely around you, in the moment, every time. Think of it as the most nourishing hour and a half you will give yourself.
+        This is a private practice offering something genuinely rare — a deeply considered approach to energy healing that weaves together Reiki, Seichem, sound therapy and meditation into one seamless, channelled experience. Unhurried. Intuitive. Entirely yours.
       </p>
     </div>
     <div class="intro-right reveal reveal-delay-2">
@@ -1504,29 +1504,23 @@
 
 
 
-<!-- ABOUT -->
-<section id="about" style="background: var(--linen);">
-  <div class="about">
-    <div class="about-image-placeholder reveal">
+<!-- ABOUT TEASER -->
+<section id="about" style="background: var(--linen); padding: 100px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="reveal">
+
+    <div class="about-image-placeholder">
       <div class="about-image-frame"></div>
     </div>
-    <div class="about-content reveal reveal-delay-2">
-      <p class="about-label">The practitioner</p>
-      <h2 class="about-name">EMMA<br>FLETCHER</h2>
-      <p class="about-credential">Reiki Master · Energy Therapist · Adelaide</p>
-      <p class="about-body">
-        Emma brings a deep foundation in energy medicine and a genuine gift for holding space. Her approach is precise, intuitive and deeply personal — drawing on the science of the biofield and the wisdom of ancient healing traditions to create something entirely her own.
-      </p>
-      <p class="about-body">
-        Clients come to Emma when they want more than a standard wellness appointment. They come for something that meets them where they are — and takes them somewhere they didn't know they needed to go.
-      </p>
-      <div class="about-modalities">
-        <div class="modality-item"><div class="modality-dot"></div> Reiki</div>
-        <div class="modality-item"><div class="modality-dot"></div> Seichem</div>
-        <div class="modality-item"><div class="modality-dot"></div> Sound Healing</div>
-        <div class="modality-item"><div class="modality-dot"></div> Meditation Therapy</div>
-      </div>
+
+    <div>
+      <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;">The practitioner</p>
+      <h2 style="font-family: 'Josefin Sans', sans-serif; font-weight: 200; font-size: clamp(36px, 5vw, 64px); letter-spacing: 0.08em; color: var(--ink); line-height: 1; margin-bottom: 12px;">EMMA<br>FLETCHER</h2>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: var(--muted); margin-bottom: 32px; letter-spacing: 0.5px;">Reiki Master · Energy Therapist · Adelaide</p>
+      <div style="height: 0.5px; background: var(--gold); width: 48px; margin-bottom: 32px;"></div>
+      <p style="font-size: 14px; line-height: 2; color: var(--umber); margin-bottom: 40px;">Emma brings a deep foundation in energy medicine and a genuine gift for holding space. Her approach is precise, intuitive and deeply personal — drawing on the science of the biofield and the wisdom of ancient healing traditions to create something entirely her own.</p>
+      <a href="about.html" style="font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 4px;">Read Emma's story →</a>
     </div>
+
   </div>
 </section>
 <!-- BOOKING CTA -->
@@ -1585,138 +1579,36 @@
 
     </div>
 
-    <!-- Blog Grid — Row 2: Three equal -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px;">
-
-      <!-- Post 4 — stone -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Reiki · Adelaide · In Person</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">What to expect from your first in-person Reiki session in Adelaide</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Curious but not sure what happens? Here is everything you need to know before you arrive.</p>
-        <a href="post-first-reiki.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
-      </div>
-
-      <!-- Post 5 — stone -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Energy Healing · Adelaide</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">Energetic healing and the nervous system — why the body holds what the mind forgets</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Trauma lives in the tissue. Energy healing offers a way in that talk therapy sometimes cannot.</p>
-        <a href="post-energy-nervous-system.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
-      </div>
-
-      <!-- Post 6 — dark -->
-      <div style="background: var(--ink); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column; position: relative;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;">Online · Reiki · Australia</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.5; margin-bottom: 14px; flex: 1;">What to expect from an online Biofield Therapy session</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--muted); margin-bottom: 28px;">Energy does not stop at a door. Here is how online sessions work — and why distance is no barrier.</p>
-        <a href="post-online-session.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
-      </div>
-
-    </div>
   </div>
 
 <!-- MAILING LIST -->
-<section style="background: var(--ink); padding: 80px 60px; position: relative; overflow: hidden;">
+<section style="background: var(--ink); padding: 48px 60px; position: relative;">
   <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-  <div style="position: absolute; top: -60px; right: -60px; width: 280px; height: 280px; border: 0.5px solid var(--gold); border-radius: 50%; opacity: 0.06;"></div>
-  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="reveal">
-    <div>
-      <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">Stay connected</p>
-      <h2 style="font-family: 'Josefin Sans', sans-serif; font-weight: 200; font-size: clamp(28px, 4vw, 44px); letter-spacing: 0.08em; color: var(--linen); line-height: 1.1; margin-bottom: 16px;">WISDOM.<br>HEALING.<br>INTEGRA.</h2>
-      <p style="font-size: 13px; line-height: 1.9; color: var(--muted);">No noise. Just meaningful words — insights on energy healing, the science behind the practice, and what is new at Integra. When they are ready.</p>
-    </div>
-    <form id="newsletter-form" style="display: flex; flex-direction: column; gap: 12px;">
-      <input type="text" placeholder="First name" required
-        style="background: rgba(242,232,213,0.06); border: 0.5px solid rgba(242,232,213,0.15); color: var(--linen); padding: 16px 20px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 300; outline: none; transition: border 0.3s; font-size: 16px;"
-        onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(242,232,213,0.15)'"/>
-      <input type="email" placeholder="Email address" required
-        style="background: rgba(242,232,213,0.06); border: 0.5px solid rgba(242,232,213,0.15); color: var(--linen); padding: 16px 20px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 300; outline: none; transition: border 0.3s; font-size: 16px;"
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+    <p style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--linen); flex: 1; min-width: 200px;">Stay connected with Integra.</p>
+    <form id="newsletter-form" style="display: flex; gap: 8px; flex: 2; min-width: 260px;">
+      <input type="email" placeholder="Your email address" required
+        style="flex: 1; background: rgba(242,232,213,0.06); border: 0.5px solid rgba(242,232,213,0.15); color: var(--linen); padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 300; outline: none; transition: border 0.3s;"
         onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(242,232,213,0.15)'"/>
       <button type="submit"
-        style="background: var(--gold); color: var(--ink); border: none; padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s;">
-        Join the list
+        style="background: var(--gold); color: var(--ink); border: none; padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; white-space: nowrap;">
+        Join
       </button>
-      <div id="newsletter-success" style="display: none;">
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--linen);">Welcome to Integra. 🖤</p>
-      </div>
-      <p style="font-size: 10px; color: rgba(242,232,213,0.2); letter-spacing: 0.5px;">No spam. Unsubscribe anytime.</p>
     </form>
+    <div id="newsletter-success" style="display: none;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--linen);">Welcome to Integra. 🖤</p>
+    </div>
   </div>
 </section>
 
 <!-- GUIDE LEAD MAGNET -->
-<section style="background: var(--stone); padding: 100px 60px; position: relative; overflow: hidden;">
-
-  <!-- Decorative circles -->
-  <div style="position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border: 0.5px solid var(--umber); border-radius: 50%; opacity: 0.2;"></div>
-  <div style="position: absolute; bottom: -60px; left: -60px; width: 220px; height: 220px; border: 0.5px solid var(--gold); border-radius: 50%; opacity: 0.15;"></div>
-
-  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="reveal">
-
-    <!-- Left — guide description -->
+<section style="background: var(--stone); padding: 60px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;" class="reveal">
     <div>
-      <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Free guide</p>
-      <h2 style="font-family: 'Josefin Sans', sans-serif; font-weight: 200; font-size: clamp(32px, 4vw, 52px); letter-spacing: 0.08em; color: var(--ink); line-height: 1.1; margin-bottom: 20px;">ACCESSING<br>YOUR CHANNEL</h2>
-      <p style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--umber); line-height: 1.6; margin-bottom: 24px;">A heart-led guide to conscious connection — by Emma Fletcher</p>
-      <div style="height: 0.5px; background: var(--gold); margin-bottom: 24px; width: 60px;"></div>
-      <p style="font-size: 13px; line-height: 1.9; color: var(--umber); margin-bottom: 12px;">Inside this guide you'll find everything you need to begin accessing your own channel — from preparing your body and environment, to heart coherence, opening the channel, and integrating what you receive.</p>
-      <p style="font-size: 13px; line-height: 1.9; color: var(--umber);">Written from Emma's own practice. Grounded in science. Guided by soul.</p>
-
-      <!-- What's inside -->
-      <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 10px;">
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>What is Channelling?
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>Preparing Body & Environment
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>Heart Coherence Method
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>Opening the Channel
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>Integration & Grounding
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 1px; color: var(--ink);">
-          <div style="width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0;"></div>Aftercare & Reflection
-        </div>
-      </div>
+      <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 10px;">A gift from Integra</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--ink);">Accessing Your Channel — a free guide.</p>
     </div>
-
-    <!-- Right — email form -->
-    <div style="background: var(--ink); padding: 56px 48px; position: relative;">
-      <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-
-      <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">Download free</p>
-      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.4; margin-bottom: 32px;">Enter your details and receive the guide directly to your inbox.</h3>
-
-      <form id="guide-form" style="display: flex; flex-direction: column; gap: 14px;">
-        <input type="text" placeholder="Your first name" required
-          style="background: rgba(242,232,213,0.06); border: 0.5px solid rgba(242,232,213,0.2); color: var(--linen); padding: 18px 24px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 300; outline: none; letter-spacing: 0.5px; transition: border 0.3s;"
-          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(242,232,213,0.2)'"/>
-        <input type="email" placeholder="Your email address" required
-          style="background: rgba(242,232,213,0.06); border: 0.5px solid rgba(242,232,213,0.2); color: var(--linen); padding: 18px 24px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 300; outline: none; letter-spacing: 0.5px; transition: border 0.3s;"
-          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(242,232,213,0.2)'"/>
-        <button type="submit"
-          style="background: var(--gold); color: var(--ink); border: none; padding: 18px 40px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; margin-top: 4px;">
-          Send me the guide
-        </button>
-      </form>
-
-      <div id="guide-success" style="display: none; text-align: center; padding: 20px 0;">
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--linen); margin-bottom: 16px;">Thank you — check your inbox. 🖤</p>
-        <a href="/integra_guide_elevated.pdf" target="_blank"
-          style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 4px;">
-          Download now →
-        </a>
-      </div>
-
-      <p style="font-size: 10px; color: rgba(242,232,213,0.2); margin-top: 20px; letter-spacing: 0.5px;">No spam. Unsubscribe anytime.</p>
-    </div>
-
+    <a href="guide.html" style="font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 4px; white-space: nowrap; flex-shrink: 0; margin-left: 60px;">Download free →</a>
   </div>
 </section>
 
@@ -1727,14 +1619,6 @@
 
 
 <script>
-  // Guide form — replace with Klaviyo API call when ready
-  document.getElementById('guide-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('guide-success').style.display = 'block';
-    // TODO: Add Klaviyo API call here with guide tag
-  });
-
   // Playlist form — replace with Klaviyo form action when ready
   document.getElementById('playlist-form').addEventListener('submit', function(e) {
     e.preventDefault();
