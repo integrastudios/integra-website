@@ -1280,7 +1280,7 @@
   <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
   <a href="#session" onclick="closeMobileMenu()">The Session</a>
   <a href="#about" onclick="closeMobileMenu()">Emma</a>
-  <a href="#journal" onclick="closeMobileMenu()">Journal</a>
+  <a href="blog.html" onclick="closeMobileMenu()">Journal</a>
   <a href="#book" onclick="closeMobileMenu()">Book</a>
   <a href="https://app.squareup.com/appointments/book/mjhk51qjbt0to5/LRDZA0N8BQXQC/start" target="_blank" style="color: var(--gold); border: 0.5px solid var(--gold); padding: 14px 32px; font-size: 18px;">Book now</a>
 </div>
@@ -1291,7 +1291,7 @@
   <ul class="nav-links">
     <li><a href="#session">The Session</a></li>
     <li><a href="#about">Emma</a></li>
-    <li><a href="#journal">Journal</a></li>
+    <li><a href="blog.html">Journal</a></li>
     <li><a href="#book">Book</a></li>
   </ul>
   <a href="https://app.squareup.com/appointments/book/mjhk51qjbt0to5/LRDZA0N8BQXQC/start" target="_blank" class="nav-book">Book now</a>
@@ -1555,61 +1555,62 @@
       <a href="blog.html" style="font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 4px;">All posts →</a>
     </div>
 
-    <!-- Blog Grid — Row 1 -->
+    <!-- Blog Grid — Row 1: Featured + 2 -->
     <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2px; margin-bottom: 2px;">
 
-      <!-- Post 1 — Featured -->
-      <div style="background: var(--ink); padding: 56px 48px; position: relative; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
+      <!-- Post 1 — Featured dark -->
+      <div style="background: var(--ink); padding: 56px 48px; position: relative; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
         <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px;">Featured · Energy Science</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.4; margin-bottom: 20px;">What is the Biofield — and why does it matter for your healing?</h3>
-        <p style="font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 40px;">The biofield is not a mystical concept — it is a scientifically documented energetic field that surrounds and permeates the human body. Here is what the research actually says.</p>
-        <a href="post-biofield.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px;">Read more →</a>
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px;">Featured · Energy Science · Adelaide</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.4; margin-bottom: 16px; flex: 1;">What is the Biofield — and why does it matter for your healing?</h3>
+        <p style="font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 32px;">The biofield is not a mystical concept — it is a scientifically documented energetic field that surrounds and permeates the human body. Here is what the research actually says.</p>
+        <a href="post-biofield.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
-      <!-- Post 2 -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 24px;">Reiki · Adelaide</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 16px;">Why no two Reiki sessions should ever feel the same</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 32px;">If your practitioner follows a script, something is missing. True Reiki is channelled — not performed.</p>
-        <a href="post-reiki-sessions.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
+      <!-- Post 2 — stone -->
+      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Reiki · Adelaide</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">Why no two Reiki sessions should ever feel the same</h3>
+        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">If your practitioner follows a script, something is missing. True Reiki is channelled — not performed.</p>
+        <a href="post-reiki-sessions.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
-      <!-- Post 3 -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 24px;">Sound Healing · Adelaide</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 16px;">The science of sound healing — what actually happens in your nervous system</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 32px;">Sound is not just heard — it is felt at a cellular level. The evidence is growing.</p>
-        <a href="post-sound-healing.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
+      <!-- Post 3 — stone -->
+      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Sound Healing · Adelaide</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">The science of sound healing — what actually happens in your nervous system</h3>
+        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Sound is not just heard — it is felt at a cellular level. The evidence is growing.</p>
+        <a href="post-sound-healing.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
     </div>
 
-    <!-- Blog Grid — Row 2 -->
+    <!-- Blog Grid — Row 2: Three equal -->
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px;">
 
-      <!-- Post 4 -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 24px;">Reiki · Adelaide</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 16px;">What to expect from your first in-person Reiki session in Adelaide</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 32px;">Curious but not sure what happens? Here is everything you need to know before you arrive in person.</p>
-        <a href="post-first-reiki.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
+      <!-- Post 4 — stone -->
+      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Reiki · Adelaide · In Person</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">What to expect from your first in-person Reiki session in Adelaide</h3>
+        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Curious but not sure what happens? Here is everything you need to know before you arrive.</p>
+        <a href="post-first-reiki.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
-      <!-- Post 5 -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 24px;">Energy Healing · Adelaide</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 16px;">Energetic healing and the nervous system — why the body holds what the mind forgets</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 32px;">Trauma lives in the tissue. Energy healing offers a way in that talk therapy sometimes cannot.</p>
-        <a href="post-energy-nervous-system.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
+      <!-- Post 5 — stone -->
+      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Energy Healing · Adelaide</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px; flex: 1;">Energetic healing and the nervous system — why the body holds what the mind forgets</h3>
+        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Trauma lives in the tissue. Energy healing offers a way in that talk therapy sometimes cannot.</p>
+        <a href="post-energy-nervous-system.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
-      <!-- Post 6 — Online session -->
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 24px;">Online · Reiki · Australia</p>
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 16px;">What to expect from an online Biofield Therapy session</h3>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 32px;">Energy does not stop at a door. Here is how online sessions work — and why distance is no barrier.</p>
-        <a href="post-online-session.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
+      <!-- Post 6 — dark -->
+      <div style="background: var(--ink); padding: 40px 32px; cursor: pointer; transition: background 0.3s; display: flex; flex-direction: column; position: relative;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
+        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;">Online · Reiki · Australia</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.5; margin-bottom: 14px; flex: 1;">What to expect from an online Biofield Therapy session</h3>
+        <p style="font-size: 12px; line-height: 1.8; color: var(--muted); margin-bottom: 28px;">Energy does not stop at a door. Here is how online sessions work — and why distance is no barrier.</p>
+        <a href="post-online-session.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; align-self: flex-start;">Read more →</a>
       </div>
 
     </div>
