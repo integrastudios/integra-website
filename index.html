@@ -1187,14 +1187,83 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
+<!-- TESTIMONIALS -->
 <section class="testimonial">
-  <div class="testimonial-inner reveal">
-    <div class="testimonial-mark">"</div>
-    <p class="testimonial-text">I walked in carrying things I didn't even know I was holding. I left feeling like I'd been returned to myself.</p>
-    <p class="testimonial-attr">Client · Adelaide</p>
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
+
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Section label -->
+    <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 80px;" class="reveal">Client Experiences</p>
+
+    <!-- Testimonial carousel -->
+    <div style="position: relative;">
+      <div id="testimonial-track" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; transition: transform 0.6s ease;">
+
+        <!-- Tania -->
+        <div class="t-card" style="background: rgba(242,232,213,0.04); padding: 48px 36px; border-top: 0.5px solid rgba(191,155,48,0.3);">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); letter-spacing: 3px; margin-bottom: 24px;">★ ★ ★ ★ ★</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.7; margin-bottom: 32px;">"Reiki with her was like a spa bath for my soul. I felt as if my spirit took deep breaths after sessions with her — and naturally the results of such profound healing unfolded in other areas of my life."</p>
+          <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);">Tania · Adelaide</p>
+        </div>
+
+        <!-- Esther -->
+        <div class="t-card" style="background: rgba(242,232,213,0.04); padding: 48px 36px; border-top: 0.5px solid rgba(191,155,48,0.3);">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); letter-spacing: 3px; margin-bottom: 24px;">★ ★ ★ ★ ★</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.7; margin-bottom: 32px;">"I went in thinking we'd be focusing on one thing, but it ended up uncovering something I'd been holding onto for a long time but hadn't felt ready to face. It was exactly what I needed. I left feeling calm, lighter, and with a real sense of release."</p>
+          <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);">Esther · Adelaide</p>
+        </div>
+
+        <!-- Darren -->
+        <div class="t-card" style="background: rgba(242,232,213,0.04); padding: 48px 36px; border-top: 0.5px solid rgba(191,155,48,0.3);">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); letter-spacing: 3px; margin-bottom: 24px;">★ ★ ★ ★ ★</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.7; margin-bottom: 32px;">"She creates an environment of calm, trust and connection. I have gotten so much more out of these sessions than I ever expected. I leave happier, with a sense of balance, and even a little curious."</p>
+          <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);">Darren · Adelaide</p>
+        </div>
+
+        <!-- Georgie -->
+        <div class="t-card" style="background: rgba(242,232,213,0.04); padding: 48px 36px; border-top: 0.5px solid rgba(191,155,48,0.3);">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); letter-spacing: 3px; margin-bottom: 24px;">★ ★ ★ ★ ★</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.7; margin-bottom: 32px;">"During the session I experienced a profound release of tension and emotional weight. Afterwards, I felt grounded, peaceful and more connected to myself than I had in a long time. It was as if my nervous system had been reset."</p>
+          <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);">Georgie · Adelaide</p>
+        </div>
+
+      </div>
+
+      <!-- Dots navigation -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-top: 48px;">
+        <button class="t-dot active" onclick="goToTestimonial(0)" style="width: 24px; height: 1px; background: var(--gold); border: none; cursor: pointer; transition: all 0.3s; padding: 0;"></button>
+        <button class="t-dot" onclick="goToTestimonial(1)" style="width: 24px; height: 1px; background: rgba(242,232,213,0.2); border: none; cursor: pointer; transition: all 0.3s; padding: 0;"></button>
+        <button class="t-dot" onclick="goToTestimonial(2)" style="width: 24px; height: 1px; background: rgba(242,232,213,0.2); border: none; cursor: pointer; transition: all 0.3s; padding: 0;"></button>
+        <button class="t-dot" onclick="goToTestimonial(3)" style="width: 24px; height: 1px; background: rgba(242,232,213,0.2); border: none; cursor: pointer; transition: all 0.3s; padding: 0;"></button>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  // Testimonial auto-rotate
+  let current = 0;
+  const cards = document.querySelectorAll('.t-card');
+  const dots = document.querySelectorAll('.t-dot');
+
+  function goToTestimonial(index) {
+    // On mobile show one at a time
+    if (window.innerWidth < 768) {
+      cards.forEach((c, i) => c.style.display = i === index ? 'block' : 'none');
+    }
+    dots.forEach((d, i) => {
+      d.style.background = i === index ? 'var(--gold)' : 'rgba(242,232,213,0.2)';
+    });
+    current = index;
+  }
+
+  // Auto advance every 5 seconds
+  setInterval(() => {
+    goToTestimonial((current + 1) % 4);
+  }, 5000);
+</script>
+
 
 <!-- LEAD MAGNET — PLAYLIST -->
 <section style="background: var(--ink); padding: 100px 60px; position: relative; overflow: hidden;">
