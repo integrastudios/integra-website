@@ -10,28 +10,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
-  :root { --ink: #1A1008; --gold: #BF9B30; --umber: #6B4E2A; --linen: #F2E8D5; --stone: #E0CCAA; --muted: #9B8B6E; }
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--linen); color: var(--ink); font-family: "DM Sans", sans-serif; font-weight: 300; }
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 22px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(242,232,213,0.96); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--stone); }
-  .nav-logo { font-family: "Josefin Sans", sans-serif; font-weight: 200; font-size: 16px; letter-spacing: 8px; color: var(--ink); text-decoration: none; }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-book { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 0.5px solid var(--gold); padding: 10px 22px; transition: all 0.3s; }
-  .nav-book:hover { background: var(--gold); color: var(--ink); }
-  .hero { background: var(--ink); padding: 140px 60px 80px; position: relative; }
-  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
-  footer { background: var(--ink); padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 2px solid var(--gold); }
-  .footer-logo { font-family: "Josefin Sans", sans-serif; font-weight: 200; font-size: 16px; letter-spacing: 8px; color: var(--linen); }
-  .footer-copy { font-size: 10px; color: rgba(242,232,213,0.2); }
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .hero { padding: 100px 24px 60px; }
-    .grid { grid-template-columns: 1fr !important; }
-    footer { padding: 32px 24px; flex-direction: column; gap: 12px; text-align: center; }
-    .journal-inner { padding: 40px 24px 60px !important; }
+  :root { --ink:#1A1008; --gold:#BF9B30; --umber:#6B4E2A; --linen:#F2E8D5; --stone:#E0CCAA; --muted:#9B8B6E; }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--linen);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 60px;display:flex;align-items:center;justify-content:space-between;background:rgba(242,232,213,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--stone);}
+  .nav-logo{font-family:'Josefin Sans',sans-serif;font-weight:200;font-size:16px;letter-spacing:8px;color:var(--ink);text-decoration:none;}
+  .nav-links{display:flex;gap:36px;list-style:none;}
+  .nav-links a{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.3s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-book{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-decoration:none;border:0.5px solid var(--gold);padding:10px 22px;transition:all 0.3s;}
+  .nav-book:hover{background:var(--gold);color:var(--ink);}
+  .hero{background:var(--ink);padding:160px 60px 100px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);}
+  .hero::after{content:'';position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;border:0.5px solid var(--gold);border-radius:50%;opacity:0.06;}
+  .wrap{max-width:1200px;margin:0 auto;padding:80px 60px 120px;}
+  .row-feat{display:grid;grid-template-columns:2fr 1fr;gap:2px;margin-bottom:2px;}
+  .row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:2px;}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+  .card{padding:48px 40px;cursor:pointer;transition:background 0.3s;display:flex;flex-direction:column;position:relative;}
+  .dark{background:var(--ink);} .dark:hover{background:#2A1A0E;}
+  .light{background:var(--stone);} .light:hover{background:var(--linen);}
+  .gold-rule{position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);}
+  .cat-d{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block;}
+  .cat-l{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--umber);margin-bottom:20px;display:block;}
+  .ttl-d{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,28px);font-weight:300;font-style:italic;color:var(--linen);line-height:1.4;margin-bottom:16px;flex:1;}
+  .ttl-l{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,21px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:14px;flex:1;}
+  .exc-d{font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:32px;}
+  .exc-l{font-size:12px;line-height:1.8;color:var(--umber);margin-bottom:28px;}
+  .lnk-d{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:0.5px solid var(--gold);padding-bottom:3px;align-self:flex-start;}
+  .lnk-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:0.5px solid var(--umber);padding-bottom:3px;align-self:flex-start;}
+  footer{background:var(--ink);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--gold);}
+  .f-logo{font-family:'Josefin Sans',sans-serif;font-weight:200;font-size:16px;letter-spacing:8px;color:var(--linen);}
+  .f-copy{font-size:10px;color:rgba(242,232,213,0.2);}
+  @media(max-width:768px){
+    nav{padding:16px 24px;} .nav-links,.nav-book{display:none;}
+    .hero{padding:100px 24px 60px;} .wrap{padding:40px 24px 60px;}
+    .row-feat,.row-3,.row-2{grid-template-columns:1fr;}
+    .card{padding:36px 28px;}
+    footer{padding:32px 24px;flex-direction:column;gap:12px;text-align:center;}
   }
 </style>
 </head>
@@ -49,70 +66,75 @@
 </nav>
 
 <div class="hero">
-  <a href="index.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 40px;">← Back to Integra</a>
-  <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">The Journal</p>
-  <h1 style="font-family: 'Josefin Sans', sans-serif; font-weight: 200; font-size: clamp(48px, 8vw, 100px); letter-spacing: 0.1em; color: var(--linen); line-height: 1;">INTEGRA<br>JOURNAL</h1>
-  <p style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--muted); margin-top: 24px;">Insights on Reiki, sound healing, energetic medicine and the science behind the practice.</p>
+  <a href="index.html" style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:40px;">← Back to Integra</a>
+  <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">The Journal</p>
+  <h1 style="font-family:'Josefin Sans',sans-serif;font-weight:200;font-size:clamp(52px,10vw,120px);letter-spacing:0.1em;color:var(--linen);line-height:0.95;">INTEGRA<br>JOURNAL</h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);margin-top:28px;max-width:500px;">Insights on Reiki, sound healing, energetic medicine and the science behind the practice.</p>
 </div>
 
-<div class="journal-inner" style="padding: 60px 60px 100px; max-width: 1200px; margin: 0 auto;">
-  <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px;">
-      <div style="background: var(--ink); padding: 56px 48px; position: relative; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px;">Energy Science · Adelaide</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.4; margin-bottom: 18px;">What is the Biofield — and why does it matter for your healing?</h2>
-        <p style="font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 36px;">The biofield is not a mystical concept — it is a scientifically documented energetic field that surrounds and permeates the human body. Here is what the research actually says.</p>
-        <a href="post-biofield.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Reiki · Adelaide</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">Why no two Reiki sessions should ever feel the same</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">If your practitioner follows a script, something is missing. True Reiki is channelled — not performed.</p>
-        <a href="post-reiki-sessions.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Sound Healing · Adelaide</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">The science of sound healing — what actually happens in your nervous system</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Sound is not just heard — it is felt at a cellular level. The evidence is growing.</p>
-        <a href="post-sound-healing.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Reiki · Adelaide · In Person</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">What to expect from your first in-person Reiki session in Adelaide</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Curious but not sure what happens? Here is everything you need to know before you arrive — from the moment you walk in to the days that follow.</p>
-        <a href="post-first-reiki.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--ink); padding: 56px 48px; position: relative; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#2A1A0E'" onmouseout="this.style.background='var(--ink)'">
-        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold);"></div>
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px;">Online · Reiki · Australia</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--linen); line-height: 1.4; margin-bottom: 18px;">What to expect from an online Biofield Therapy session</h2>
-        <p style="font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 36px;">Energy does not stop at a door. Here is exactly how online sessions work — and why distance is no barrier to deep energetic healing.</p>
-        <a href="post-online-session.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Energy Healing · Adelaide · Science</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">Energetic healing and the nervous system — why the body holds what the mind forgets</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Trauma and stress are stored in the body, not just the mind. Energetic healing offers a direct pathway to nervous system regulation that talk therapy alone sometimes cannot reach.</p>
-        <a href="post-energy-nervous-system.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Sound Healing · Adelaide · Instruments</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">Crystal bowls, chimes and tuning forks — what each instrument does and why it matters</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">Not all sound healing is the same. Each instrument carries a different frequency and reaches a different layer of the body. Here is how to understand what you are feeling.</p>
-        <a href="post-sound-instruments.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
-      <div style="background: var(--stone); padding: 40px 32px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='var(--linen)'" onmouseout="this.style.background='var(--stone)'">
-        <p style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--umber); margin-bottom: 20px;">Energy Science · Adelaide</p>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 14px;">What is the Biofield — and why does it matter for your healing?</h2>
-        <p style="font-size: 12px; line-height: 1.8; color: var(--umber); margin-bottom: 28px;">The biofield is not a mystical concept — it is a scientifically documented energetic field. Here is what the research says and what it means for your healing.</p>
-        <a href="blog-post.html" style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 0.5px solid var(--umber); padding-bottom: 3px;">Read more →</a>
-      </div>
+<div class="wrap">
+
+  <!-- Row 1 — Two featured dark -->
+  <div class="row-feat">
+    <div class="card dark">
+      <div class="gold-rule"></div>
+      <span class="cat-d">Featured · Energy Science · Adelaide</span>
+      <p class="ttl-d">What is the Biofield — and why does it matter for your healing?</p>
+      <p class="exc-d">The biofield is not a mystical concept — it is a scientifically documented energetic field that surrounds and permeates the human body. Here is what the research actually says.</p>
+      <a href="post-biofield.html" class="lnk-d">Read more →</a>
+    </div>
+    <div class="card dark">
+      <div class="gold-rule"></div>
+      <span class="cat-d">Online · Reiki · Australia</span>
+      <p class="ttl-d">What to expect from an online Biofield Therapy session</p>
+      <p class="exc-d">Energy does not stop at a door. Here is how online sessions work — and why distance is no barrier.</p>
+      <a href="post-online-session.html" class="lnk-d">Read more →</a>
+    </div>
   </div>
+
+  <!-- Row 2 — Three light -->
+  <div class="row-3">
+    <div class="card light">
+      <span class="cat-l">Reiki · Adelaide</span>
+      <p class="ttl-l">Why no two Reiki sessions should ever feel the same</p>
+      <p class="exc-l">If your practitioner follows a script, something is missing. True Reiki is channelled — not performed.</p>
+      <a href="post-reiki-sessions.html" class="lnk-l">Read more →</a>
+    </div>
+    <div class="card light">
+      <span class="cat-l">Sound Healing · Adelaide</span>
+      <p class="ttl-l">The science of sound healing — what actually happens in your nervous system</p>
+      <p class="exc-l">Sound is not just heard — it is felt at a cellular level. The evidence is growing.</p>
+      <a href="post-sound-healing.html" class="lnk-l">Read more →</a>
+    </div>
+    <div class="card light">
+      <span class="cat-l">Reiki · Adelaide · In Person</span>
+      <p class="ttl-l">What to expect from your first in-person Reiki session in Adelaide</p>
+      <p class="exc-l">Curious but not sure what happens? Here is everything you need to know before you arrive.</p>
+      <a href="post-first-reiki.html" class="lnk-l">Read more →</a>
+    </div>
+  </div>
+
+  <!-- Row 3 — Two light -->
+  <div class="row-2">
+    <div class="card light">
+      <span class="cat-l">Energy Healing · Adelaide · Science</span>
+      <p class="ttl-l">Energetic healing and the nervous system — why the body holds what the mind forgets</p>
+      <p class="exc-l">Trauma lives in the tissue. Energy healing offers a way in that talk therapy sometimes cannot reach.</p>
+      <a href="post-energy-nervous-system.html" class="lnk-l">Read more →</a>
+    </div>
+    <div class="card light">
+      <span class="cat-l">Sound Healing · Adelaide · Instruments</span>
+      <p class="ttl-l">Crystal bowls, chimes and tuning forks — what each instrument does and why it matters</p>
+      <p class="exc-l">Not all sound healing is the same. Each instrument carries a different frequency and reaches a different layer of the body.</p>
+      <a href="post-sound-instruments.html" class="lnk-l">Read more →</a>
+    </div>
+  </div>
+
 </div>
 
 <footer>
-  <p class="footer-logo">INTEGRA.</p>
-  <p class="footer-copy">© 2025 Integra Studios · integrastudios.au</p>
+  <p class="f-logo">INTEGRA.</p>
+  <p class="f-copy">© 2025 Integra Studios · integrastudios.au</p>
 </footer>
 
 </body>
